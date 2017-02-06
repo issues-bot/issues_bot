@@ -4,7 +4,7 @@ const twitterCredentialFile = `${__dirname}/config/twitterCredentials.json`;
 const credFileExists = fs.existsSync(twitterCredentialFile, 'utf8');
 
 const twitterCredentials =
-  credFileExists && process.env.NODE_ENV !== 'development' ?
+  credFileExists || process.env.NODE_ENV === 'development' ?
   JSON.parse(fs.readFileSync(twitterCredentialFile)) :
   {
     consumer_key: process.env.TWITTER_CONSUMER_KEY,
