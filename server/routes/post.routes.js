@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import * as PostController from '../controllers/post.controller';
 import * as SpreadsheetController from '../controllers/spreadsheet.controller';
-import * as IssuesBotTwitter from '../controllers/issues_bot_twitter.controller';
+import * as IssuesBotTwitter from '../controllers/issuesBotTwitter.controller';
 const router = new Router();
 
 // Get all Posts
